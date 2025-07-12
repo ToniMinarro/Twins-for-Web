@@ -2,8 +2,8 @@ const gameBoard = document.getElementById('game-board');
 const scoreElement = document.getElementById('score');
 
 const cards = [
-    'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D',
-    'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'
+    '1', '1', '2', '2', '3', '3', '4', '4',
+    '5', '5', '6', '6', '7', '7', '8', '8'
 ];
 
 let score = 0;
@@ -24,11 +24,13 @@ function createCard(cardValue) {
 
     const front = document.createElement('div');
     front.classList.add('front');
-    front.textContent = '?';
 
     const back = document.createElement('div');
     back.classList.add('back');
-    back.textContent = cardValue;
+
+    const backImage = document.createElement('img');
+    backImage.src = `images/${cardValue}.png`;
+    back.appendChild(backImage);
 
     card.appendChild(front);
     card.appendChild(back);
