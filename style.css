@@ -5,6 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
 
 #game-container {
@@ -17,6 +18,10 @@ body {
     gap: 10px;
     max-width: 420px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 480px) {
@@ -44,12 +49,14 @@ body {
 .card {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
+    background-color: #fff;
     border: 2px solid #333;
     cursor: pointer;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card.flipped {
@@ -65,10 +72,17 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .card .back {
     transform: rotateY(180deg);
+}
+
+.card .back img {
+    max-width: 80%;
+    max-height: 80%;
 }
 
 #scoreboard {
